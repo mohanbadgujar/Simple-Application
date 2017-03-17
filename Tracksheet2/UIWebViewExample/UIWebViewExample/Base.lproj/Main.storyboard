@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UIWebViewExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mRk-cO-tFc">
+                                <rect key="frame" x="7" y="6" width="362" height="661"/>
+                                <color key="backgroundColor" red="0.86098991199999997" green="0.89066506410000001" blue="0.81204437019999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPc-wK-CQd">
+                                <rect key="frame" x="2" y="586" width="91" height="30"/>
+                                <color key="backgroundColor" red="0.86098991199999997" green="0.89066506410000001" blue="0.81204437019999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="91" id="RD8-v9-J3R"/>
+                                </constraints>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="back:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m9Z-ml-wUz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n8F-u5-amJ">
+                                <rect key="frame" x="280" y="586" width="91" height="30"/>
+                                <color key="backgroundColor" red="0.86098991199999997" green="0.89066506410000001" blue="0.81204437019999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="StopLoading"/>
+                                <connections>
+                                    <action selector="stopLoading:" destination="BYZ-38-t0r" eventType="touchUpInside" id="feK-sC-Zxa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RTN-IS-FFg">
+                                <rect key="frame" x="101" y="586" width="75" height="30"/>
+                                <color key="backgroundColor" red="0.86098991199999997" green="0.89066506410000001" blue="0.81204437019999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="WTL-tb-pzf"/>
+                                </constraints>
+                                <state key="normal" title="Forword"/>
+                                <connections>
+                                    <action selector="forword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JEy-n9-ZQr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YlR-do-cEx">
+                                <rect key="frame" x="197" y="586" width="75" height="30"/>
+                                <color key="backgroundColor" red="0.86098991199999997" green="0.89066506410000001" blue="0.81204437019999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="8id-zo-nlv"/>
+                                </constraints>
+                                <state key="normal" title="Reload"/>
+                                <connections>
+                                    <action selector="reload:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Ec-9X-qF2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mRk-cO-tFc" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="5JY-bm-Rgq"/>
+                            <constraint firstItem="WPc-wK-CQd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-14" id="6av-r7-x1M"/>
+                            <constraint firstItem="n8F-u5-amJ" firstAttribute="leading" secondItem="YlR-do-cEx" secondAttribute="trailing" constant="8" symbolic="YES" id="7WT-e0-DMU"/>
+                            <constraint firstItem="RTN-IS-FFg" firstAttribute="baseline" secondItem="YlR-do-cEx" secondAttribute="baseline" id="DLj-r0-B7o"/>
+                            <constraint firstItem="YlR-do-cEx" firstAttribute="leading" secondItem="RTN-IS-FFg" secondAttribute="trailing" constant="21" id="MvZ-RE-0b1"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WPc-wK-CQd" secondAttribute="bottom" constant="51" id="PTq-ts-NeG"/>
+                            <constraint firstItem="RTN-IS-FFg" firstAttribute="leading" secondItem="WPc-wK-CQd" secondAttribute="trailing" constant="8" symbolic="YES" id="Rv2-bS-7cS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="n8F-u5-amJ" secondAttribute="trailing" constant="-12" id="Xua-ek-p2K"/>
+                            <constraint firstItem="mRk-cO-tFc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-9" id="YSf-2Z-IyL"/>
+                            <constraint firstItem="WPc-wK-CQd" firstAttribute="baseline" secondItem="RTN-IS-FFg" secondAttribute="baseline" id="a9M-eY-Nne"/>
+                            <constraint firstItem="mRk-cO-tFc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="6" id="jcm-l9-wMR"/>
+                            <constraint firstItem="YlR-do-cEx" firstAttribute="baseline" secondItem="n8F-u5-amJ" secondAttribute="baseline" id="kuM-dP-SIT"/>
+                            <constraint firstItem="mRk-cO-tFc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rrt-Wl-5JV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="mRk-cO-tFc" id="IZ8-a5-deJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="112.89355322338831"/>
+        </scene>
+    </scenes>
+</document>
